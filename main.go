@@ -5,19 +5,9 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/mmcdole/gofeed"
+	"github.com/asturm2910/CTGoKurs/cmd"
 )
 
 func main() {
-	// Use public function "Println" of package fmt
-	fmt.Println("fEEd rEAder ...")
-	fmt.Println("==================================")
-	fp := gofeed.NewParser()
-	feed, _ := fp.ParseURL("https://www.heise.de/rss/heise-atom.xml")
-	for i := 0; i < 5; i++ {
-		fmt.Println(feed.Items[i].Title + " --> " + feed.Items[i].Published)
-	}
-	fmt.Println("==================================")
+	cmd.Exec()
 }
